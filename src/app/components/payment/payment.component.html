@@ -1,0 +1,54 @@
+<div class="title text-center">
+    <h3>Resumen del Mes</h3>
+</div>
+<table class="table table-bordered">
+    <tbody>
+        <tr>
+            <td>Nombre del Empleado</td>
+            <td>{{payment.nameEmployeed}}</td>
+        </tr>
+        <tr>
+            <td>Numero del Empleado</td>
+            <td>{{payment.numberEmployeed}}</td>
+        </tr>
+        <tr>
+            <td>Rol del Empleado</td>
+            <td>{{payment.rolEmployeed}}</td>
+        </tr>
+        <tr>
+            <td>Fecha de Pago</td>
+            <td>{{payment.dateResumen | date: 'LLL yyyy'}}</td>
+        </tr>
+        <tr>
+            <td>Horas Trabajadas</td>
+            <td>{{payment.hours}}</td>
+        </tr>                        
+        <tr>
+            <td>Pago por Entregas</td>
+            <td>{{payment.paymentDelivery | currency}}</td>
+        </tr>
+        <tr>
+            <td>Pago Total por Bonos</td>
+            <td>{{payment.paymentBonds | currency}}</td>
+        </tr>
+        <tr>
+            <td>Retenciones</td>
+            <td>{{payment.isr | currency}}</td>
+        </tr>
+        <tr>
+            <td>Vales</td>
+            <td>{{payment.vouchers | currency}}</td>
+        </tr>
+        <tr>
+            <td>Pago Antes de Impuestos</td>
+            <td>{{payment.payment | currency}}</td>
+        </tr>
+        <tr>
+            <td>Pago Total</td>
+            <td>{{payment.totalPayment | currency}}</td>
+        </tr>
+    </tbody>
+</table>
+<div class="col-lg-12 text-center mT15">
+    <button class="btn btn-secondary" [routerLink]="['/Home/Dashboard']" routerLinkActive="router-link-active">Atras</button>
+</div>

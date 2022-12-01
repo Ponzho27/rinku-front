@@ -1,0 +1,37 @@
+
+<div class="col-lg-12 text-center mt-1">
+  <div class="title" style="margin-top: 20px;">
+    <h3>Listado de Empleados</h3>
+  </div>            
+</div>
+
+<div class="row" style="margin-top: 30px; margin-bottom: 20px;">
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Buscar Empleado" aria-label="Example text with button addon" aria-describedby="button-addon1" (change)="filterItem(this.strSearch)" [(ngModel)]="strSearch">
+    <button class="btn btn-outline-secondary" type="button" id="button-addon1" (click)="filterItem(this.strSearch)"><i class="bi bi-search"></i></button>
+  </div>
+</div>
+
+<div class="tableEmployeed">
+  <table class="table table-bordered table-responsive">
+    <thead class="stickyHeade">
+      <tr>
+        <th class="text-center" scope="col">Numero</th>
+        <th class="text-start" scope="col">Nombre</th>
+        <th class="text-center" scope="col">Rol</th>
+        <th class="text-center" scope="col">Capturar</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let item of this.listEmployeedC">
+      <tr>
+        <th class="text-center" scope="row">{{item.E_NUMBER_ID}}</th>
+        <td class="text-start">{{item.E_NAME}}</td>
+        <td class="text-center">{{item.R_NAME}}</td>
+        <td class="text-center"><button class="btn btn-outline-secondary" (click)="capturarMes(item)"><i class="bi bi-wallet"></i></button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="col-lg-12 text-center mT15">
+  <button class="btn btn-success" [routerLink]="['/Home/Nuevo']" routerLinkActive="router-link-active"><i class="bi bi-plus-circle"></i></button>
+</div>

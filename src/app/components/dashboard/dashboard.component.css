@@ -1,0 +1,23 @@
+.header-per{ background-color: #ebebeb; padding: 15px; } .header-per.p20{ padding: 15px 20px; }
+.header-per input{ width: 100%; padding: 8px 35px 8px 0; background: none; border: none; border-bottom: 1px solid #9e9d9c; }
+.header-per button{ font-size: 20px; position: absolute; right: 20px; top: 7px; color: #00a950; }
+
+.header-per input::-webkit-input-placeholder { color: #59595b; }
+.header-per input:-moz-placeholder { color: #59595b; }
+.header-per input::-moz-placeholder { color: #59595b; }
+.header-per input:-ms-input-placeholder { color: #59595b; }
+
+.tableEmployeed{
+    height: 400px;
+    overflow-y: auto;
+    border-color: #dee2e6;
+    border: 1px solid #dee2e6;
+}
+
+.stickyHeade{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: white;
+    border: 1px solid #dee2e6;
+}

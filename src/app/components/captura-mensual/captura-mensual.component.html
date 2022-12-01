@@ -1,0 +1,34 @@
+<div class="title text-center">
+    <h3>Captura de Entregas por Mes</h3>
+</div>
+<div class="mb-3">
+    <label for="form_nu_e" class="form-label">Numero de Empleado</label>
+    <input type="text" class="form-control" id="id_em" placeholder="" [(ngModel)]="employeed.E_NUMBER_ID" disabled>
+</div>
+<div class="mb-3">
+    <label for="form_no_e" class="form-label">Nombre de Empleado</label>
+    <input type="text" class="form-control" id="name_employeed" placeholder="" [(ngModel)]="employeed.E_NAME" disabled>
+</div>
+<div class="mb-3">
+    <label for="form_r" class="form-label">Rol</label>
+    <input type="text" class="form-control" id="rol_name" placeholder="" [(ngModel)]="employeed.R_NAME" disabled>
+</div>
+<div class="mb-3">
+    <label for="form_m" class="form-label">Mes</label>
+    <input name="startDate" id="startDate" class="date-picker form-control" readonly/>
+    <div id="form_e_feedBack" class="invalid-feedback">
+        Es necesario colocar una fecha para poder calcular el salario del empleado
+    </div>
+</div>
+<div class="mb-3">
+    <label for="form_e" class="form-label">Entregas</label>
+    <input type="number" class="form-control" id="entrega" placeholder="" [(ngModel)]="employeed.DELIVERY">
+    <div id="form_e_feedBack" class="invalid-feedback">
+        Es necesario colocar un numero de entregas para continuar
+    </div>
+</div>
+    
+<div class="col-lg-12 text-center mT15">
+    <button class="btn btn-secondary" [routerLink]="['/Home/Dashboard']" routerLinkActive="router-link-active" >Atras</button>
+    <button class="btn btn-success btnGuardar" (click)="saveConsulta()">Captura</button>
+</div>

@@ -1,0 +1,35 @@
+<div class="alertNuevo hidden">
+    <div class="alert alert-success" role="alert">
+        ¡Empleado generado correctamente!
+    </div>
+</div>
+
+<div class="title text-center">
+    <h3>Nuevo Empleado</h3>
+</div>
+<div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Numero de Empleado</label>
+    <input type="text" class="form-control" placeholder="" [(ngModel)]="employeedNew.ID" disabled>
+</div>
+<div class="mb-3">
+    <label for="form_name_employeed" class="form-label">Nombre de Empleado</label>
+    <input type="text" class="form-control" id="name_employeed_e" placeholder="" [(ngModel)]="employeedNew.E_NAME">
+    <div id="form_name_employeed_FeedBack" class="invalid-feedback">
+        Es necesario colocar un nombre de empleado para poder generarlo
+    </div>
+</div>
+
+<div class="form-check" *ngFor="let item of roles">
+    <input class="form-check-input" type="radio" name="radioRoles" id="{{item.R_NAME}}" value="{{item.ID}}" (click)="saveRoleSelected(value)" #value>
+    <label class="form-check-label" for="radioRoles">
+        {{item.R_NAME}}
+    </label>
+    <div id="form_e_feedBack" class="invalid-feedback">
+        Es necesario seleccionar un rol para asignarle al usuario
+    </div>
+
+</div>
+<div class="col-lg-12 text-center mT15">
+    <button class="btn btn-secondary" [routerLink]="['/Home/Dashboard']" routerLinkActive="router-link-active" >Atras</button>
+    <button class="btn btn-success btnGuardar" (click)="save()">Guardar</button>
+</div>

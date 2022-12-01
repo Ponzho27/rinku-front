@@ -1,0 +1,37 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+.ui-datepicker-calendar, .ui-datepicker table{
+    display: none !important;
+}
+
+.formApp{
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    padding: 14px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    background-color: cornsilk;
+}
+
+.backgroundBody{
+    background-color: #f9f6f2 !important;
+}
+
+.formColor{
+    background-color: white;
+    padding: 25px;
+    margin: 20px;
+}
+
+.mT15{
+    margin-top: 15px !important;
+}
+
+.hidden{
+    display: none;
+}
+
+.table-responsive {
+    max-height:300px;
+}
